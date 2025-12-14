@@ -17,7 +17,7 @@ A modern, responsive portfolio website built with Next.js 16, TypeScript, and Ta
 
 ## Tech Stack
 
-- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **Icons:** [Lucide React](https://lucide.dev/) + [React Icons](https://react-icons.github.io/react-icons/)
