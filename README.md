@@ -1,12 +1,12 @@
 # Personal Portfolio - Cavin
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS v4. Showcasing my work as a Software Developer, Network Technician and IT Professional.
+A modern, responsive portfolio website built with Next.js 16, TypeScript, and Tailwind CSS v4. Showcasing my work as a Software Developer, Network Technician and IT Professional.
 
 ![Portfolio Preview](./public/og-image.png)
 
 ## Features
 
-- **Lightning Fast** - Built with Next.js 15 for optimal performance
+- **Lightning Fast** - Built with Next.js 16 for optimal performance
 - **Fully Responsive** - Seamless experience across all devices
 - **Modern UI/UX** - Clean design with smooth animations and transitions
 - **Accessible** - WCAG compliant with semantic HTML and ARIA labels
