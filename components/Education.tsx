@@ -1,3 +1,9 @@
+/**
+ * © 2025 Cavin
+ * MIT License – https://opensource.org/licenses/MIT
+ * Repo: https://github.com/devcavin/cavin
+ */
+
 import { education } from '@/data/content';
 import { ArrowUpRight } from 'lucide-react';
 
