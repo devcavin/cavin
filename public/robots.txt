@@ -1,0 +1,21 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Allow: /api/og/* # allow og files
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Disallow admin or private pages (if any)
+Disallow: /api/
+Disallow: /node_modules/
+Disallow: /private/
+
+# Allow important files
+Allow: /images/
+Allow: /public/
+Allow: /*.css$
+Allow: /*.ts$
+
+# Sitemap location
+Sitemap: https://devcavin.vercel.app/sitemap.xml
