@@ -37,7 +37,7 @@ export default function NotFound() {
             Go Home
           </Link>
           
-          {/** This butto still doesn't work, it's a working progress */}
+          {/** This button still doesn't work, it's a working progress */}
           <button
             onClick={() => window.history.back()}
             className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-slate-300 rounded-lg hover:bg-slate-700 transition-colors font-medium"
