@@ -4,6 +4,7 @@
  * Repo: https://github.com/devcavin/cavin
  */
 
+// components/Experience.tsx
 import { experiences } from '@/data/content';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -51,12 +52,6 @@ export default function Experience() {
                         </span>
                       </a>
                     </div>
-                    
-                    {exp.subRoles && (
-                      <div className="text-slate-500 text-sm mt-1" aria-label="Previous roles">
-                        {exp.subRoles.join(' · ')}
-                      </div>
-                    )}
                   </h3>
 
                   <p className="mt-2 text-sm leading-normal">
