@@ -12,6 +12,7 @@ import { siteMetadata } from '@/data/content';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteMetadata.siteUrl),
   title: 'Cavin Larry | Full Stack Developer & IT Professional',
   description: 'Portfolio of Cavin Larry - Full Stack Developer specializing in Kotlin, React, Next.js, and DevOps. Network Technician with expertise in system administration and infrastructure management.',
   keywords: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     'Portfolio',
     'Kenya Developer',
   ],
-  authors: [{ name: 'Cavin Larry', url: 'https://cavinlarry.netlify.app' }],
+  authors: [{ name: 'Cavin Larry', url: 'https://devcavin.vercel.app' }],
   creator: 'Cavin Larry',
   publisher: 'Cavin Larry',
   robots: {
