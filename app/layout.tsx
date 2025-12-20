@@ -6,6 +6,7 @@
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import { siteMetadata } from '@/data/content';
 
@@ -82,6 +83,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-slate-900 text-slate-400 antialiased`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
