@@ -123,7 +123,7 @@ export default function Projects() {
             className="inline-flex items-center font-medium leading-tight text-slate-200 group"
           >
             <span className="border-b border-transparent pb-px transition group-hover:border-teal-300">
-              View Full Project Archive
+              See more projects
             </span>
             <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none" />
           </a>

@@ -4,8 +4,9 @@
  * Repo: https://github.com/devcavin/cavin
  */
 
-import { archiveProjects, personalInfo } from '@/data/content';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { projects, personalInfo } from '@/data/content';
+import { ArrowLeft, ArrowUpRight, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 
@@ -34,86 +35,67 @@ export default function Archive() {
           A complete archive of things I&apos;ve built over the years. From small experiments to full-fledged applications.
         </p>
 
-        {/* Archive Table */}
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-left">
-            <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur">
-              <tr>
-                <th className="py-4 pr-8 text-sm font-semibold text-slate-200">Year</th>
-                <th className="py-4 pr-8 text-sm font-semibold text-slate-200">Project</th>
-                <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell">
-                  Built with
-                </th>
-                <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 sm:table-cell">
-                  Link
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {archiveProjects.map((project, index) => (
-                <tr 
-                  key={index}
-                  className="border-b border-slate-300/10 last:border-none hover:bg-slate-800/50 transition-colors"
-                >
-                  <td className="py-4 pr-4 align-top text-sm">
-                    <div className="translate-y-px text-slate-400">
-                      {project.year}
+        {/* Projects Grid - All projects from main projects array */}
+        <ul className="group/list">
+          {projects.map((project, index) => (
+            <li key={index} className="mb-12">
+              <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                
+                {/* Project Image */}
+                <div className="z-10 sm:order-2 sm:col-span-3">
+                  {project.image ? (
+                    <div className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30">
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} screenshot`}
+                        width={400}
+                        height={225}
+                        className="rounded object-cover"
+                      />
                     </div>
-                  </td>
-                  <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
-                    <div>
-                      <div className="block sm:hidden">
-                        {project.links.live || project.links.github ? (
-                          <a
-                            href={project.links.live || project.links.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                          >
-                            <span>{project.title}</span>
-                            <ExternalLink className="ml-1 inline-block h-3.5 w-3.5 shrink-0" />
-                          </a>
-                        ) : (
-                          <span>{project.title}</span>
-                        )}
-                      </div>
-                      <div className="hidden sm:block">{project.title}</div>
+                  ) : (
+                    <div className="rounded border-2 border-slate-200/10 bg-slate-800/50 aspect-video flex items-center justify-center">
+                      <span className="text-slate-500 text-sm">No preview</span>
                     </div>
-                    <div className="mt-1 text-sm leading-normal text-slate-400">
-                      {project.description}
-                    </div>
-                    <ul className="mt-2 flex flex-wrap lg:hidden" aria-label="Technologies used">
-                      {project.technologies.map((tech, techIndex) => (
-                        <li key={techIndex} className="mr-1.5 mt-2">
-                          <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                            {tech}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </td>
-                  <td className="hidden py-4 pr-4 align-top lg:table-cell">
-                    <ul className="flex flex-wrap">
-                      {project.technologies.map((tech, techIndex) => (
-                        <li key={techIndex} className="mr-1.5 mt-2">
-                          <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                            {tech}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </td>
-                  <td className="hidden py-4 align-top sm:table-cell">
-                    <div className="flex gap-3">
+                  )}
+                </div>
+
+                {/* Project Details */}
+                <div className="z-10 sm:order-1 sm:col-span-5">
+                  <h3>
+                    <a
+                      href={project.links.live || project.links.github || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+                    >
+                      <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                      <span>
+                        {project.title}
+                        <span className="inline-block">
+                          <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
+                        </span>
+                      </span>
+                    </a>
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-normal">
+                    {project.description}
+                  </p>
+
+                  {/* Project Links */}
+                  {(project.links.github || project.links.live || project.links.demo) && (
+                    <div className="flex gap-4 mt-2 text-sm">
                       {project.links.github && (
                         <a
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-slate-400 hover:text-slate-200 transition-colors"
-                          aria-label="GitHub repository"
+                          className="flex items-center gap-1 text-slate-400 hover:text-teal-300 transition-colors"
                         >
-                          <FaGithub className="h-5 w-5" />
+                          <FaGithub className="h-4 w-4" />
+                          <span>Code</span>
                         </a>
                       )}
                       {project.links.live && (
@@ -121,19 +103,41 @@ export default function Archive() {
                           href={project.links.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-slate-400 hover:text-slate-200 transition-colors"
-                          aria-label="Live demo"
+                          className="flex items-center gap-1 text-slate-400 hover:text-teal-300 transition-colors"
                         >
-                          <ExternalLink className="h-5 w-5" />
+                          <ExternalLink className="h-4 w-4" />
+                          <span>Live Demo</span>
+                        </a>
+                      )}
+                      {project.links.demo && (
+                        <a
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-slate-400 hover:text-teal-300 transition-colors"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          <span>Demo Video</span>
                         </a>
                       )}
                     </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+                  )}
+
+                  {/* Technologies */}
+                  <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+                    {project.technologies.map((tech, techIndex) => (
+                      <li key={techIndex} className="mr-1.5 mt-2">
+                        <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+                          {tech}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

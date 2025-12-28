@@ -4,66 +4,35 @@
  * Repo: https://github.com/devcavin/cavin
  */
 
+import { SiNextdotjs, SiVercel } from 'react-icons/si';
+
 export default function Footer() {
   return (
     <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
-      <p>
-        Loosely designed in{' '}
-        <a
-          href="https://www.figma.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-        >
-          Figma
-        </a>{' '}
-        and coded in{' '}
-        <a
-          href="https://code.visualstudio.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-        >
-          Visual Studio Code
-        </a>
-        . Built with{' '}
+      <div className="flex flex-wrap items-center gap-4">
+        <span>Built with</span>
         <a
           href="https://nextjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="inline-flex items-center gap-2 font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
         >
-          Next.js
-        </a>{' '}
-        and{' '}
-        <a
-          href="https://tailwindcss.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-        >
-          Tailwind CSS
+          <SiNextdotjs className="h-5 w-5" />
+          <span>Next.js</span>
         </a>
-        , deployed with{' '}
+
+        <span> and deployed with</span>
+        
         <a
           href="https://vercel.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
+          className="inline-flex items-center gap-2 font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
         >
-          Vercel
+          <SiVercel className="h-5 w-5" />
+          <span>Vercel</span>
         </a>
-        . All text is set in the{' '}
-        <a
-          href="https://rsms.me/inter/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-        >
-          Inter
-        </a>{' '}
-        typeface.
-      </p>
+      </div>
     </footer>
   );
 }
