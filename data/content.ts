@@ -12,7 +12,6 @@ export const personalInfo = {
   location: "Nairobi, Kenya",
   phone: "+254 798 941735",
   
-  // Social links - set to null if you don't have that platform
   social: {
     github: "https://github.com/devcavin",
     gitlab: "https://gitlab.com/devcavin",
@@ -30,7 +29,7 @@ export const about = {
   paragraphs: [
     "I'm an IT graduate passionate about building robust software solutions and reliable infrastructure. I develop backend systems with Kotlin (Ktor, Spring Boot), craft responsive frontends with React and Next.js, and thrive at the intersection of software development and IT operations.",
     "Currently, I work as a Network Technician at WECONNECT WIFI, installing fiber optic networks and troubleshooting connectivity issues. Previously, I provided system administration and technical support at Nairobi City Water & Sewerage Company, gaining hands-on experience in network configuration and infrastructure management.",
-    "I'm expanding my DevOps skillset with Docker, CI/CD pipelines, and cloud platforms (Azure, GCP). As a Postman Student Leader, I promote API literacy through workshops and mentor developers on API design and testing. When I'm not coding, you'll find me exploring new technologies and contributing to developer communities."
+    "I'm expanding my DevOps skillset with Docker, CI/CD pipelines, and cloud platforms (Azure). As a Postman Student Leader, I promote API literacy through workshops and mentor developers on API design and testing. When I'm not coding, you'll find me exploring new technologies and contributing to developer communities."
   ]
 };
 
@@ -164,58 +163,6 @@ export const projects = [
   }
 ];
 
-export const archiveProjects = [
-  {
-    year: "2025",
-    title: "Fortspring Authentication System",
-    description: "Modular backend authentication with JWT, OAuth2, and Redis session management",
-    technologies: ["Kotlin", "Spring Boot", "JWT", "OAuth2", "Redis"],
-    links: {
-      github: "https://github.com/devcavin/fortspring-security",
-      live: null
-    }
-  },
-  {
-    year: "2025",
-    title: "E-commerce Backend API",
-    description: "Comprehensive REST API for product catalog, cart, and order management",
-    technologies: ["Kotlin", "Ktor", "PostgreSQL", "Docker"],
-    links: {
-      github: "https://github.com/devcavin/brightside",
-      live: null
-    }
-  },
-  {
-    year: "2025",
-    title: "Customer Service Dashboard",
-    description: "Internal ticketing system for ICT service requests",
-    technologies: ["Ktor", "FastAPI", "Supabase", "JavaScript"],
-    links: {
-      github: "https://github.com/devcavin/customer-service-learning",
-      live: null
-    }
-  },
-  {
-    year: "2025",
-    title: "Drug Research Platform",
-    description: "Real-time molecular data analysis with AI integration",
-    technologies: ["Next.js", "React", "TypeScript", "AI/ML"],
-    links: {
-      github: "https://github.com/devcavin/protein-binding",
-      live: null
-    }
-  },
-  {
-    year: "2025",
-    title: "Health Information Management System",
-    description: "Patient health records management with security compliance",
-    technologies: ["Kotlin", "Ktor", "SQLite", "REST API"],
-    links: {
-      github: "https://github.com/devcavin/HealthInfoSystem",
-      live: null
-    }
-  }
-];
 
 export const siteMetadata = {
   title: `${personalInfo.name} | ${personalInfo.role}`,
