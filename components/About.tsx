@@ -4,7 +4,21 @@
  * Repo: https://github.com/devcavin/cavin
  */
 
-import { about } from '@/data/content';
+import { about, personalInfo } from '@/data/content';
+import { FaGithub, FaGitlab, FaInstagram, FaLinkedin, FaReddit, FaTwitch, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { Mail } from 'lucide-react';
+
+const socialLinks = [
+    { icon: FaGithub, url: personalInfo.social.github, label: 'GitHub' },
+    { icon: FaGitlab, url: personalInfo.social.gitlab, label: 'GitLab' },
+    { icon: FaLinkedin, url: personalInfo.social.linkedin, label: 'LinkedIn' },
+    { icon: FaTwitter, url: personalInfo.social.twitter, label: 'Twitter' },
+    { icon: FaInstagram, url: personalInfo.social.instagram, label: 'Instagram' },
+    { icon: FaReddit, url: personalInfo.social.reddit, label: 'Reddit' },
+    { icon: FaTwitch, url: personalInfo.social.twitch, label: 'Twitch' },
+    { icon: FaYoutube, url: personalInfo.social.youtube, label: 'YouTube' },
+    { icon: Mail, url: `mailto:${personalInfo.email}`, label: 'Email' },
+  ].filter(link => link.url);
 
 export default function About() {
   return (
@@ -25,6 +39,27 @@ export default function About() {
             {paragraph}
           </p>
         ))}
+      </div>
+      <div>
+        {/* Social Links */}
+        <ul className="ml-1 mt-8 flex items-center gap-5" aria-label="Social media">
+          {socialLinks.map((link, index) => {
+            const Icon = link.icon;
+            return (
+              <li key={index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-slate-400 hover:text-slate-200 transition-colors"
+                  aria-label={link.label}
+                >
+                  <Icon className="h-6 w-6" />
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
