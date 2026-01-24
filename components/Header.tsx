@@ -29,7 +29,7 @@ export default function Header() {
             className="text-xl font-bold text-slate-200 hover:text-teal-300 transition-colors"
             onClick={closeMenu}
           >
-            Cavin Larry
+           
           </Link>
 
           {/* Desktop Navigation */}
