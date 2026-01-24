@@ -27,15 +27,15 @@ export const personalInfo = {
 
 export const about = {
   paragraphs: [
-    "I'm an IT graduate passionate about building robust software solutions and reliable infrastructure. I develop backend systems with Kotlin (Ktor, Spring Boot), craft responsive frontends with React and Next.js, and thrive at the intersection of software development and IT operations.",
-    "Currently, I work as a Network Technician at WECONNECT WIFI, installing fiber optic networks and troubleshooting connectivity issues. Previously, I provided system administration and technical support at Nairobi City Water & Sewerage Company, gaining hands-on experience in network configuration and infrastructure management.",
+    "I'm a SOftware Developer passionate about building robust software solutions and reliable infrastructure. I develop backend systems with Expres, NestJS, Ktor, Spring Boot, craft responsive frontends with React and Next.js, and thrive at the intersection of software development and IT operations.",
+    "Previously, I interned as a Network Technician at WECONNECT WIFI, installing overhead fiber optic network cabling and troubleshooting connectivity issues. I also provided system administration and technical support at Nairobi City Water & Sewerage Company backin the day as an ICT intern, which helped me gain hands-on experience in network configuration and infrastructure management.",
     "I'm expanding my DevOps skillset with Docker, CI/CD pipelines, and cloud platforms (Azure). As a Postman Student Leader, I promote API literacy through workshops and mentor developers on API design and testing. When I'm not coding, you'll find me exploring new technologies and contributing to developer communities."
   ]
 };
 
 export const experiences = [
   {
-    period: "2025 — Present",
+    period: "Sep 2025 — Dec 2025",
     company: "WECONNECT WIFI",
     companyUrl: "",
     role: "Network Technician",
@@ -73,7 +73,7 @@ export const education = [
     period: "May 2025 — Aug 2025",
     institution: "Teach2Give",
     institutionUrl: "https://teach2give.com",
-    degree: "IT Customer Service Nanodegree",
+    degree: "IT Customer Service Bootcamp",
     description: "Completed professional training in customer communication, problem-solving, and team collaboration. Applied soft skills training to improve client interactions and service delivery in technical support environments.",
     coursework: ["Customer Communication", "Problem Solving", "Team Collaboration", "Service Delivery"]
   },
@@ -81,7 +81,7 @@ export const education = [
     period: "May 2024 — Dec 2024",
     institution: "Power Learn Project Academy",
     institutionUrl: "https://powerlearnprojectafrica.org",
-    degree: "Software Development Nanodegree",
+    degree: "Software Development Bootcamp",
     description: "Intensive bootcamp focused on full-stack development fundamentals. Built practical skills in API integration, database design, and responsive UI/UX development through hands-on projects and real-world scenarios.",
     coursework: ["Full-Stack Development", "API Integration", "Database Design", "Responsive UI/UX"]
   }
@@ -110,7 +110,7 @@ export const projects = [
       live: null,
       demo: null
     },
-    image: "/images/projects/protein-binding.jpg",
+    image: null,
     featured: true
   },
   {
@@ -146,7 +146,7 @@ export const projects = [
       live: null,
       demo: "https://github.com/devcavin/HealthInfoSystem/blob/main/docs/HealthInfoSystem_Demo.mp4"
     },
-    image: "/images/projects/health-infosystem.png",
+    image: null,
     featured: false
   },
   {
@@ -159,6 +159,18 @@ export const projects = [
       demo: null
     },
     image: "/images/projects/personal-portfolio.png",
+    featured: false
+  },
+  {
+    title: "Pesacore",
+    description: "Modern core banking service developed in Kotlin, Spring Boot, PostgreSQL , Docker Compose",
+    technologies: ["Kotlin", "Spring Boot", "", "PostgreSQL", "Docker"],
+    links: {
+      github: "https://github.com/devcavin/pesa-core",
+      live: null,
+      demo: null
+    },
+    image: null,
     featured: false
   }
 ];
