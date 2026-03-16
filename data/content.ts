@@ -35,6 +35,14 @@ export const about = {
 
 export const experiences = [
   {
+    period: "Feb 2026 —  Present",
+    company: "E-NETHUB CONNECTIONS",
+    companyUrl: "https://www.linkedin.com/company/e-nethubconnections",
+    role: "Network Technician",
+    description: "Installing and splicing fiber optic cables for high-speed connectivity across Meru, Kenya. Configuring routers, switches, and network equipment while ensuring signal integrity and network uptime. Applying advanced troubleshooting techniques and network design standards to maintain reliable infrastructure.",
+    technologies: ["Fiber Optics", "Network Configuration", "Routers", "Switches", "Troubleshooting", "Network Design"]
+  },
+  {
     period: "Sep 2025 — Dec 2025",
     company: "WECONNECT WIFI",
     companyUrl: "",
