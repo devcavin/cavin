@@ -210,7 +210,7 @@ While this is a personal portfolio, suggestions and feedback are welcome!
 
 **Cavin**
 - Website: [devcavin.vercel.app](https://devcavin.vercel.app)
-- LinkedIn: [linkedin.com/in/cavin-larry](https://linkedin.com/in/devcavin)
+- LinkedIn: [linkedin.com/in/devcavin](https://linkedin.com/in/devcavin)
 - Twitter(X): [x.com/devcavin](https://x.com/devcavin)
 - Email: cavinlarry001@gmail.com
 
