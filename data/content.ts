@@ -6,12 +6,12 @@
 
 export const personalInfo = {
   name: "Cavin Larry",
-  role: "Software Developer, Network Technician & IT Professional",
+  role: "Software Engineer, Network Technician & IT Professional",
   tagline: "I build scalable backend systems and APIs, develop responsive frontends, and maintain robust IT infrastructure.",
   email: "cavinlarry001@gmail.com",
   location: "Nairobi, Kenya",
   phone: "+254 798 941735",
-  
+
   social: {
     github: "https://github.com/devcavin",
     gitlab: "https://gitlab.com/devcavin",
@@ -27,9 +27,10 @@ export const personalInfo = {
 
 export const about = {
   paragraphs: [
-    "I'm a SOftware Developer passionate about building robust software solutions and reliable infrastructure. I develop backend systems with Expres, NestJS, Ktor, Spring Boot, craft responsive frontends with React and Next.js, and thrive at the intersection of software development and IT operations.",
-    "Previously, I interned as a Network Technician at WECONNECT WIFI, installing overhead fiber optic network cabling and troubleshooting connectivity issues. I also provided system administration and technical support at Nairobi City Water & Sewerage Company backin the day as an ICT intern, which helped me gain hands-on experience in network configuration and infrastructure management.",
-    "I'm expanding my DevOps skillset with Docker, CI/CD pipelines, and cloud platforms (Azure). As a Postman Student Leader, I promote API literacy through workshops and mentor developers on API design and testing. When I'm not coding, you'll find me exploring new technologies and contributing to developer communities."
+    "I'm a Software Engineer and IT professional who builds things end to end backend APIs in Kotlin and Java with Spring Boot, responsive frontends in React and Next.js, and the infrastructure that keeps it all running. I'm drawn to work that sits at the intersection of software and systems, where clean code and reliable networks have to coexist.",
+    "My hands-on experience spans both worlds. I've deployed fiber optic infrastructure across Meru County as a Network Technician first with WeConnect WiFi, now contracting with E-NetHub Connections, one of the region's larger ISPs covering a wide geographical footprint. On the software side I've built fintech backends, field monitoring platforms, merchant payment dashboards integrated against live banking APIs, and infrastructure automation tools.",
+    "Earlier I interned as an ICT Support Technician at Nairobi City Water & Sewerage Company, maintaining systems for 200+ employees across LAN/WAN configuration, user access management, hardware troubleshooting, and technical documentation which grounded my understanding of what enterprise IT actually looks like day to day.",
+    "I'm currently deepening my microservices knowledge with Kafka and distributed systems, expanding into DevOps with Docker and cloud platforms, and serving as a Postman Student Leader where I run API workshops and mentor developers across Kenya. When I'm not building something, I'm usually thinking about what to build next."
   ]
 };
 
@@ -118,7 +119,7 @@ export const projects = [
       live: null,
       demo: null
     },
-    image: null,
+    image: "/images/projects/protein-binding.jpg",
     featured: true
   },
   {
@@ -175,6 +176,54 @@ export const projects = [
     technologies: ["Kotlin", "Spring Boot", "", "PostgreSQL", "Docker"],
     links: {
       github: "https://github.com/devcavin/pesa-core",
+      live: null,
+      demo: null
+    },
+    image: null,
+    featured: false
+  },
+  {
+    title: "SmartSeason Field Monitoring System",
+    description: "Full-stack crop field monitoring platform. Features role-based access (Admin and Field Agent), JWT authentication, strict stage transition enforcement (PLANTED → GROWING → READY → HARVESTED), computed field status logic, update history, and role-specific dashboards. Backend in Kotlin and Spring Boot, frontend in React with TypeScript.",
+    technologies: ["Kotlin", "Spring Boot", "React", "TypeScript", "PostgreSQL", "Docker", "Tailwind CSS"],
+    links: {
+      github: "https://github.com/devcavin/smartseason-field-monitoring-system",
+      live: "https://smartseason-cavin.vercel.app",
+      demo: null
+    },
+    image: "/images/projects/sfms.png",
+    featured: true
+  },
+  {
+    title: "Kollect — Merchant Payment Dashboard",
+    description: "Merchant-facing payment dashboard integrated with Credit Bank's CB Konnect API. Implements live sandbox integrations for account balance inquiry and transaction history, with STK Push collections and QR code payment flows in progress. Purpose-built to demonstrate working familiarity with Credit Bank's developer ecosystem.",
+    technologies: ["Kotlin", "Spring Boot", "REST Client", "CB Konnect API"],
+    links: {
+      github: "https://github.com/devcavin/kollect",
+      live: null,
+      demo: null
+    },
+    image: null,
+    featured: false
+  },
+  {
+    title: "NetInsight — Network Insights REST API",
+    description: "Containerized REST API exposing structured local and public network interface data across IPv4 and IPv6. Designed for incremental expansion into bandwidth monitoring, interface statistics, and device discovery built directly from real-world network troubleshooting experience in the field.",
+    technologies: ["Kotlin", "Spring Boot", "Docker", "REST API"],
+    links: {
+      github: "https://github.com/devcavin/netinsight",
+      live: null,
+      demo: null
+    },
+    image: null,
+    featured: false
+  },
+  {
+    title: "BackupTool — Infrastructure Backup Automation",
+    description: "Automated backup utility for network configuration files with AWS S3 integration, scheduled cron jobs, configurable retention policies, and comprehensive audit logging. Cuts manual backup time by 90% and ensures disaster recovery readiness for network infrastructure.",
+    technologies: ["Java", "Bash", "AWS S3", "Cron", "Docker"],
+    links: {
+      github: "https://github.com/devcavin/backup-tool",
       live: null,
       demo: null
     },
