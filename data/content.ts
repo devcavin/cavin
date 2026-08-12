@@ -36,7 +36,7 @@ export const about = {
 
 export const experiences = [
   {
-    period: "Feb 2026 —  Present",
+    period: "Feb 2026 —  July 2026",
     company: "E-NETHUB CONNECTIONS",
     companyUrl: "https://www.linkedin.com/company/e-nethubconnections",
     role: "Network Technician",
@@ -60,8 +60,8 @@ export const experiences = [
     technologies: ["Network Administration", "System Administration", "Windows Server", "Linux", "IT Asset Management", "Technical Support"]
   },
   {
-    period: "Mar 2024 — Present",
-    company: "Postman Inc",
+    period: "Mar 2024 — Oct 2025",
+    company: "Postman Student Program",
     companyUrl: "https://postman.com/student-program/",
     role: "Postman Student Leader",
     description: "Promote API literacy among student developers through hands-on workshops and technical talks. Mentor peers on API design, testing, and documentation. Organize community events in partnership with Google Developer Groups and Microsoft Learn Student Ambassadors, fostering a collaborative environment focused on API best practices.",
@@ -99,6 +99,18 @@ export const education = [
 
 export const projects = [
   {
+    title: "Gatelog - Visitor Management System",
+    description: "Production-style REST API backend with two-layer RBAC (Spring Security @PreAuthorize at the HTTP layer, service-layer business rule enforcement), JWT with refresh token rotation, and Flyway-managed migrations consumed by a React and TypeScript SPA. CI/CD via GitHub Actions runs Testcontainers integration tests against a live PostgreSQL instance on every pull request, then builds and pushes a multi-stage Docker image to GHCR, Render and Vercel. Clean code principles across controller, service, and repository layers with documented architecture decisions.",
+    technologies: ["Kotlin", "Spring Boot", "JWT", "OAuth2", "Spring Security"],
+    links: {
+      github: "https://github.com/devcavin/gatelog",
+      live: "https://gatelogapp.vercel.app",
+      demo: null
+    },
+    image: "/images/projects/gatelog.png",
+    featured: true
+  },
+  {
     title: "Fortspring Authentication System",
     description: "Built a modular backend authentication system using Kotlin and Spring Boot. Implemented JWT-based stateless authentication, Redis session management, and OAuth2 integration for scalable identity management and secure user access control.",
     technologies: ["Kotlin", "Spring Boot", "JWT", "OAuth2", "Spring Security", "Redis"],
@@ -108,7 +120,7 @@ export const projects = [
       demo: null
     },
     image: "/images/projects/fortspring.jpeg",
-    featured: true
+    featured: false
   },
   {
     title: "Drug Research Platform",
@@ -132,7 +144,7 @@ export const projects = [
       demo: null
     },
     image: "/images/projects/ecommerce.jpeg",
-    featured: true
+    featured: false
   },
   {
     title: "Customer Service Dashboard",
@@ -172,7 +184,7 @@ export const projects = [
   },
   {
     title: "Pesacore",
-    description: "Modern core banking service developed in Kotlin, Spring Boot, PostgreSQL , Docker Compose",
+    description: "ACID-compliant financial transaction backend with double-entry ledger accounting for deposits, withdrawals, and P2P transfers. A deliberate no-rollback audit policy persists failed transactions to the audit trail for financial reconciliation and security review. Centralized exception handler produces consistent JSON error responses across a clean controller, service, and repository layer separation",
     technologies: ["Kotlin", "Spring Boot", "", "PostgreSQL", "Docker"],
     links: {
       github: "https://github.com/devcavin/pesa-core",
@@ -184,7 +196,7 @@ export const projects = [
   },
   {
     title: "SmartSeason Field Monitoring System",
-    description: "Full-stack crop field monitoring platform. Features role-based access (Admin and Field Agent), JWT authentication, strict stage transition enforcement (PLANTED → GROWING → READY → HARVESTED), computed field status logic, update history, and role-specific dashboards. Backend in Kotlin and Spring Boot, frontend in React with TypeScript.",
+    description: "Full-stack application demonstrating end-to-end SDLC delivery – Spring Boot REST API backend consumed by a React and TypeScript SPA. JWT authentication, two-role access model, and strict server-side state machine with lifecycle transition validation. Deployed on Render (backend) and Vercel (frontend) with Docker Compose locally, demonstrating cross-layer engineering and REST API consumption from a React frontend.",
     technologies: ["Kotlin", "Spring Boot", "React", "TypeScript", "PostgreSQL", "Docker", "Tailwind CSS"],
     links: {
       github: "https://github.com/devcavin/smartseason-field-monitoring-system",
@@ -196,7 +208,7 @@ export const projects = [
   },
   {
     title: "Kollect — Merchant Payment Dashboard",
-    description: "Merchant-facing payment dashboard integrated with Credit Bank's CB Konnect API. Implements live sandbox integrations for account balance inquiry and transaction history, with STK Push collections and QR code payment flows in progress. Purpose-built to demonstrate working familiarity with Credit Bank's developer ecosystem.",
+    description: "Backend service integrating two live financial APIs – Credit Bank CB Konnect (Balance Inquiry, Account Statement, STK Push) and M-Pesa Daraja for mobile payment processing. Implements real authentication flows, structured error handling across third-party responses, and sandbox environment testing. Directly relevant to financial services API integration within an insurance and financial services environment",
     technologies: ["Kotlin", "Spring Boot", "REST Client", "CB Konnect API"],
     links: {
       github: "https://github.com/devcavin/kollect",

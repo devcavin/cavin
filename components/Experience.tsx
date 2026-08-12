@@ -75,7 +75,7 @@ export default function Experience() {
 
         <div className="mt-12">
           <a
-            href="/resume.pdf"
+            href="/Cavin_Larry_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center font-medium leading-tight text-slate-200 group"
